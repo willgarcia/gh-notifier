@@ -5,6 +5,7 @@ use Exception;
 use Symfony\Component\Console\Application as BaseApplication;
 use Symfony\Component\Yaml\Yaml;
 use wooshell\ghnotifier\EventDispatcher\Listeners\Drivers\GnuNotifyListener;
+use wooshell\ghnotifier\EventDispatcher\Listeners\Drivers\GnuRemoteNotifyListener;
 use wooshell\ghnotifier\EventDispatcher\Listeners\Drivers\SwiftMailerListener;
 use wooshell\storeNotifier\EventDispatcher\Events\SendEvent;
 use wooshell\storeNotifier\StoreNotifier;
@@ -49,6 +50,19 @@ class Application extends BaseApplication
 
         $listener = new GnuNotifyListener(
             $this->getConfiguration('gnu_notify.bin')
+        );
+        $this
+            ->getStoreNotifier()
+            ->getDispatcher()
+            ->addListener(SendEvent::EVENT_SEND, array($listener , 'send'));
+        $this
+            ->getStoreNotifier()
+            ->getDispatcher()
+            ->addListener(SendEvent::EVENT_ERROR, array($listener , 'send'));
+
+        $listener = new GnuRemoteNotifyListener(
+            $this->getConfiguration('gnu_notify.bin'),
+            $this->getConfiguration('gnu_notify.users')
         );
         $this
             ->getStoreNotifier()
