@@ -1,0 +1,18 @@
+{
+    "alias": "gh-notifier.phar",
+    "chmod": "0755",
+    "directories": ["src"],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "Tests"
+            ],
+            "in": "vendor"
+        }
+    ],
+    "git-version": "package_version",
+    "main": "bin/gh-notifier",
+    "output": "gh-notifier.phar",
+    "stub": true
+}
