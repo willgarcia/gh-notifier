@@ -1,0 +1,25 @@
+{
+    "name": "wooshell/gh-notifier",
+    "description": "Github releases notifier",
+    "authors": [
+        {
+            "name": "William Garcia",
+            "email": "garcia.rodriguez.william@gmail.com"
+        }
+    ],
+    "require": {
+        "knplabs/github-api": "*",
+        "symfony/console": "2.2.*",
+        "swiftmailer/swiftmailer": "5.1.*@dev",
+        "symfony/yaml": "2.3.*",
+        "wooshell/store-notifier": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": { "": "src" }
+    },
+    "bin": ["bin/gh-notifier"],
+    "config": {
+        "bin-dir": "bin"
+    }
+}

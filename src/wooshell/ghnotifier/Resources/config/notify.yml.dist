@@ -1,0 +1,18 @@
+## Github API
+github:
+  auth-token: ...
+  repos: /path/to/reposfile
+
+## Store Notifier
+store_notifier:
+  tracks_dir: /path/to/store/historydir
+
+## Notifier Listeners
+gnu_notify:
+  bin: /usr/bin/notify-send
+
+swift_mailer:
+  smtp: localhost
+  email_to: ...
+  email_from: ...
+  email_from_password: ...
