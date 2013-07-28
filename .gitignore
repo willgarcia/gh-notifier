@@ -3,3 +3,4 @@ notify.yml
 vendor
 composer.phar
 *.log
+gh-notifier.phar

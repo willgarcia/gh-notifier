@@ -6,7 +6,9 @@
         {
             "name": "*.php",
             "exclude": [
-                "Tests"
+                "Tests",
+                "test-suite",
+                "test"
             ],
             "in": "vendor"
         }
