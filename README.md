@@ -30,7 +30,7 @@ Use this command to send notifications:
 
     $ bin/gh-notifier send
 
-In the background, an history file is stored for each github project and at each run, the script detects new releases thanks to calls to the Githup API.
+In the background, an history file is stored for each github project and at each run, the script detects new releases via Github API.
 
 Notifications modes (not yet implemented):
 
