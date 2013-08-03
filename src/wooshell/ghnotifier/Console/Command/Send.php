@@ -4,6 +4,7 @@ namespace wooshell\ghnotifier\Console\Command;
 use Github\Client;
 use Github\Exception\RuntimeException;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -16,6 +17,7 @@ class Send extends Command
     public function __construct($name = null)
     {
         parent::__construct('send');
+        $this->addArgument('modes', InputArgument::REQUIRED);
         $this->addOption('lock-file', 'lf', InputOption::VALUE_REQUIRED);
     }
 
@@ -30,6 +32,7 @@ class Send extends Command
         if (null !== $input->getOption('lock-file')) {
             $this->getStoreNotifier()->lock($input->getOption('lock-file'));
         }
+        $this->initApplication($input->getArgument('modes'));
 
         // github api
         $github = new Client();
@@ -63,6 +66,7 @@ class Send extends Command
             foreach ($tags as $tag) {
                 $tagName = basename($tag['ref']);
                 if (false === $this->getStoreNotifier()->exists($repoKey, $tagName)) {
+                    var_dump($repo,$tagName);
                     $this->getStoreNotifier()->log($tagName);
 
                     $this->getStoreNotifier()->send(
@@ -85,5 +89,23 @@ class Send extends Command
     public function getStoreNotifier()
     {
         return $this->getApplication()->getStoreNotifier();
+    }
+
+    /**
+     * @param  array                                  $modes
+     * @return \Symfony\Component\Console\Application
+     * @throws \Exception
+     */
+    public function initApplication($modes)
+    {
+        if (null === $modes) {
+            throw new \Exception('A notification mode must be defined');
+        }
+        $app = parent::getApplication();
+        foreach (explode(',', $modes) as $mode) {
+            $app->registerEventListener(ucfirst($mode . 'Listener'));
+        }
+
+        $this->setApplication($app);
     }
 }

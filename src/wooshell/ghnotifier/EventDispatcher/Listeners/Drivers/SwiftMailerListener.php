@@ -7,9 +7,9 @@ use Swift_Message;
 use Swift_SmtpTransport;
 use Symfony\Component\EventDispatcher\Event;
 use wooshell\storeNotifier\EventDispatcher\Events\SendEvent;
-use wooshell\storeNotifier\EventDispatcher\Listeners\ListenerInterface;
+use wooshell\storeNotifier\EventDispatcher\Listeners\NotifyListenerInterface;
 
-class SwiftMailerListener implements ListenerInterface
+class SwiftMailerListener implements NotifyListenerInterface
 {
 
     /**

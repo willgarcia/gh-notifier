@@ -4,9 +4,9 @@ namespace wooshell\ghnotifier\EventDispatcher\Listeners\Drivers;
 
 use Symfony\Component\EventDispatcher\Event;
 use wooshell\storeNotifier\EventDispatcher\Events\SendEvent;
-use wooshell\storeNotifier\EventDispatcher\Listeners\ListenerInterface;
+use wooshell\storeNotifier\EventDispatcher\Listeners\NotifyListenerInterface;
 
-class GnuNotifyListener implements ListenerInterface
+class GnuListener implements NotifyListenerInterface
 {
 
     private $binary;

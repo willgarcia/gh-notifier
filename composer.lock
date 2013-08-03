@@ -358,12 +358,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wooshell/store-notifier.git",
-                "reference": "e1338ea58155fffd461e39a7daa0237c46b4a268"
+                "reference": "497c470778bb478b198386d3c13d5e7b5c50cee9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wooshell/store-notifier/zipball/e1338ea58155fffd461e39a7daa0237c46b4a268",
-                "reference": "e1338ea58155fffd461e39a7daa0237c46b4a268",
+                "url": "https://api.github.com/repos/wooshell/store-notifier/zipball/497c470778bb478b198386d3c13d5e7b5c50cee9",
+                "reference": "497c470778bb478b198386d3c13d5e7b5c50cee9",
                 "shasum": ""
             },
             "require": {
@@ -387,7 +387,7 @@
                 }
             ],
             "description": "PHP store notifier",
-            "time": "2013-07-28 12:26:01"
+            "time": "2013-08-03 07:26:38"
         }
     ],
     "packages-dev": [

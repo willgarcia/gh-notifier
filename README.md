@@ -4,9 +4,8 @@ gh-notifier
 Tracks github projects and let you know when new releases are available.
 
 Notifications modes:
-* mail (mode: "mail")
-* desktop notification (mode: "notifys")
-* remotes desktop notification (mode: "notifysnw")
+* mail (mode: "swiftMailer")
+* desktop notification (mode: "gnu")
 
 Prerequisites
 -------------
@@ -32,9 +31,13 @@ Use this command to send notifications:
 
 In the background, an history file is stored for each github project and at each run, the script detects new releases via Github API.
 
-Notifications modes (not yet implemented):
+Notifications modes
 
-    $ bin/gh-notifier send --modes=mail,notifys
+    $ bin/gh-notifier send --modes=gnu,mail
+    $ bin/gh-notifier send --modes=gnu
+    $ ..
+
+Modes values are comma separated
 
 Running automatically
 ---------------------
@@ -43,7 +46,7 @@ Lock each run of gh-notifier if you want to cronify the script. The lock file is
 
     $ bin/gh-notifier send --lock-file=/tmp/gh-notifier.lock
 
-You can build a PHAR if you need an easy way to deploy (needs box.phar installation from https://github.com/kherge/Box):
+You can build a PHAR if you need an easy way to deploy (needs box.phar installation from https://github.com/kherge/Box ):
 
     $ build box
     $ chmod +x gh-notifier.phar
