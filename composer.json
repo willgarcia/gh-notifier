@@ -1,6 +1,9 @@
 {
     "name": "wooshell/gh-notifier",
     "description": "Github releases notifier",
+    "keywords": ["github","notification", "store"],
+    "type": "project",
+    "description": "Tracks github projects to let you know when new releases are available.",
     "authors": [
         {
             "name": "William Garcia",

@@ -1,7 +1,7 @@
 gh-notifier (wip)
 =================
 
-Tracks github projects and let you know when new releases are available.
+Tracks github projects to let you know when new releases are available.
 
 Notifications modes:
 * mail (mode: "swiftMailer")

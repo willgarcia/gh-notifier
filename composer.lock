@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "594a95e4b65b88785de1137cc289703f",
+    "hash": "87a83b22975019f12c225ced7d695d36",
     "packages": [
         {
             "name": "knplabs/github-api",
@@ -358,12 +358,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wooshell/store-notifier.git",
-                "reference": "497c470778bb478b198386d3c13d5e7b5c50cee9"
+                "reference": "d0d9dba14484e2e151678d7b911c6c3157ef8bac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wooshell/store-notifier/zipball/497c470778bb478b198386d3c13d5e7b5c50cee9",
-                "reference": "497c470778bb478b198386d3c13d5e7b5c50cee9",
+                "url": "https://api.github.com/repos/wooshell/store-notifier/zipball/d0d9dba14484e2e151678d7b911c6c3157ef8bac",
+                "reference": "d0d9dba14484e2e151678d7b911c6c3157ef8bac",
                 "shasum": ""
             },
             "require": {
@@ -380,14 +380,23 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
             "authors": [
                 {
                     "name": "William Garcia",
                     "email": "garcia.rodriguez.william@gmail.com"
                 }
             ],
-            "description": "PHP store notifier",
-            "time": "2013-08-03 07:26:38"
+            "description": "PHP notifier based on Symfony EventDispatcher. Sends notification(s) when events are fired. Provides file storage to keep tracks of notifications.",
+            "keywords": [
+                "dispatcher",
+                "event",
+                "notification",
+                "store"
+            ],
+            "time": "2013-08-03 08:39:34"
         }
     ],
     "packages-dev": [
