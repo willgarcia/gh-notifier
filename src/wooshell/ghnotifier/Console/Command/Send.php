@@ -66,7 +66,6 @@ class Send extends Command
             foreach ($tags as $tag) {
                 $tagName = basename($tag['ref']);
                 if (false === $this->getStoreNotifier()->exists($repoKey, $tagName)) {
-                    var_dump($repo,$tagName);
                     $this->getStoreNotifier()->log($tagName);
 
                     $this->getStoreNotifier()->send(
