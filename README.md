@@ -1,5 +1,5 @@
-gh-notifier
-===========
+gh-notifier (wip)
+=================
 
 Tracks github projects and let you know when new releases are available.
 
