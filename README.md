@@ -10,7 +10,7 @@ Notifications modes:
 Prerequisites
 -------------
 
-* notify-send for notifys* modes
+* notify-send for gnu mode
 
 Installation
 ------------
@@ -27,24 +27,20 @@ Usage
 
 Use this command to send notifications:
 
-    $ bin/gh-notifier send
+    $ bin/gh-notifier send gnu,mail
+    $ bin/gh-notifier send gnu
+    $ ..
 
 In the background, an history file is stored for each github project and at each run, the script detects new releases via Github API.
 
-Notifications modes
-
-    $ bin/gh-notifier send --modes=gnu,mail
-    $ bin/gh-notifier send --modes=gnu
-    $ ..
-
-Modes values are comma separated
+Notification modes values are comma separated
 
 Running automatically
 ---------------------
 
 Lock each run of gh-notifier if you want to cronify the script. The lock file is removed at the end of a run.
 
-    $ bin/gh-notifier send --lock-file=/tmp/gh-notifier.lock
+    $ bin/gh-notifier send gnu --lock-file=/tmp/gh-notifier.lock
 
 You can build a PHAR if you need an easy way to deploy (needs box.phar installation from https://github.com/kherge/Box ):
 
