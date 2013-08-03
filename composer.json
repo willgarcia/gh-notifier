@@ -4,6 +4,7 @@
     "keywords": ["github","notification", "store"],
     "type": "project",
     "description": "Tracks github projects to let you know when new releases are available.",
+    "license": "MIT",
     "authors": [
         {
             "name": "William Garcia",
